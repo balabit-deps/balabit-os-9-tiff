@@ -1,0 +1,13 @@
+fix_TIFFReadRawStrip_man_page_typo.patch
+CVE-2022-22844.patch
+CVE-2022-0561.patch
+CVE-2022-0562.patch
+CVE-2022-0865.patch
+CVE-2022-0908.patch
+CVE-2022-0907.patch
+CVE-2022-0909.patch
+CVE-2022-0891.patch
+CVE-2022-0924.patch
+CVE-2022-1354.patch
+CVE-2022-1355.patch
+CVE-2022-2056_2057_2058.patch
