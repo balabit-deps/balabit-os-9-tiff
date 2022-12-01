@@ -1,3 +1,37 @@
+tiff (4.3.0-6ubuntu0.3) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: unsigned integer overflow
+    - debian/patches/CVE-2022-3970.patch: adds size_t type casts in the
+      TIFFReadRGBATile function in libtiff/tif_getimage.c.
+    - CVE-2022-3970
+
+ -- David Fernandez Gonzalez <david.fernandezgonzalez@canonical.com>  Thu, 01 Dec 2022 10:12:53 +0100
+
+tiff (4.3.0-6ubuntu0.2) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: out-of-bound read/write in tiffcrop
+    - debian/patches/CVE-2022-2867_2868_2869.patch: Fix heap-buffer-overflow by
+      correcting uint32_t underflow
+    - CVE-2022-2867
+    - CVE-2022-2868
+    - CVE-2022-2869  
+  * SECURITY UPDATE: heap-based buffer overflow
+    - debian/patches/CVE-2022-3570_3598.patch: increases buffer sizes for
+      subroutines in tools/tiffcrop.c.
+    - CVE-2022-3570
+    - CVE-2022-3598
+  * SECURITY UPDATE: out-of-bound write in tiffcrop
+    - debian/patches/CVE-2022-3599.patch: Revised handling of TIFFTAG_INKNAMES
+      and related TIFFTAG_NUMBEROFINKS value
+    - CVE-2022-3599
+  * SECURITY UPDATE: stack overflow in _TIFFVGetField
+    - debian/patches/CVE-2022-34526.patch: Add _TIFFCheckFieldIsValidForCodec()
+      return FALSE when passed a codec-specific tag and the codec is not
+      configured
+    - CVE-2022-34526 
+
+ -- Nishit Majithia <nishit.majithia@canonical.com>  Wed, 02 Nov 2022 13:55:08 +0530
+
 tiff (4.3.0-6ubuntu0.1) jammy-security; urgency=medium
 
   * SECURITY UPDATE: buffer overflow issue in tiffinfo tool
