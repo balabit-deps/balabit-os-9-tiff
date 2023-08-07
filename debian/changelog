@@ -1,3 +1,45 @@
+tiff (4.3.0-6ubuntu0.5) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: heap-based buffer overflow
+    - debian/patches/CVE-2022-48281.patch: correct simple copy paste error in
+      tiffcrop.c.
+    - CVE-2022-48281
+  * SECURITY UPDATE: NULL pointer dereference
+    - d/p/0001-countInkNamesString-fix-UndefinedBehaviorSanitizer-a.patch: Fix
+      undefined behavior in tif_dir.c.
+    - CVE-2023-2908
+  * SECURITY UPDATE: NULL pointer dereference
+    - d/p/0002-TIFFClose-avoid-NULL-pointer-dereferencing.-fix-515.patch: avoid
+      NULL pointer dereferencing in tif_close.c.
+    - CVE-2023-3316
+  * SECURITY UPDATE: buffer overflow
+    - d/p/0003-Consider-error-return-of-writeSelections.patch: Consider error
+      return of writeSelections() in tiffcrop.c.
+    - CVE-2023-3618
+  * SECURITY UPDATE: heap-based buffer overflow
+    - d/p/0004-tiffcrop-correctly-update-buffersize-after-rotateIma.patch:
+      correctly update buffersize after rotateImage() and enlarge buffsize and
+      check integer overflow within rotateImage() in tiffcrop.c.
+    - CVE-2023-25433
+  * SECURITY UPDATE: Use after free
+    - d/p/0005-tiffcrop-Do-not-reuse-input-buffer-for-subsequent-im.patch: Do
+      not reuse input buffer for subsequent images in tiffcrop.c.
+    - CVE-2023-26965
+  * SECURITY UPDATE: buffer overflow
+    - d/p/0006-tif_luv-Check-and-correct-for-NaN-data-in-uv_encode.patch: Check
+      and correct for NaN data in uv_encode() in tif_luv.c.
+    - CVE-2023-26966
+  * SECURITY UPDATE: Integer overflow
+    - d/p/0007-tiffcp-fix-memory-corruption-overflow-on-hostile-ima.patch: fix
+      memory corruption (overflow) in tiffcp.c.
+    - CVE-2023-38288
+  * SECURITY UPDATE: Integer overflow
+    - d/p/0008-raw2tiff-fix-integer-overflow-and-bypass-of-the-chec.patch: fix
+      integer overflow and bypass of the check in raw2tiff.c.
+    - CVE-2023-38289
+
+ -- Fabian Toepfer <fabian.toepfer@canonical.com>  Mon, 07 Aug 2023 17:56:53 +0200
+
 tiff (4.3.0-6ubuntu0.4) jammy-security; urgency=medium
 
   * SECURITY UPDATE: out-of-bounds reads
