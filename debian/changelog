@@ -1,3 +1,14 @@
+tiff (4.3.0-6ubuntu0.7) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: denial of service
+    - debian/patches/CVE-2022-40090.patch: Improved IFD-Loop Handling.
+    - CVE-2022-40090
+  * SECURITY UPDATE: memory leak
+    - debian/patches/CVE-2023-3576.patch: Fix memory leak in tiffcrop.c.
+    - CVE-2023-3576
+
+ -- Fabian Toepfer <fabian.toepfer@canonical.com>  Thu, 23 Nov 2023 14:39:56 +0100
+
 tiff (4.3.0-6ubuntu0.6) jammy-security; urgency=medium
 
   * SECURITY UPDATE: out-of-bound read

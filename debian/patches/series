@@ -28,3 +28,5 @@ CVE-2022-48281.patch
 0007-tiffcp-fix-memory-corruption-overflow-on-hostile-ima.patch
 0008-raw2tiff-fix-integer-overflow-and-bypass-of-the-chec.patch
 CVE-2023-1916.patch
+CVE-2022-40090.patch
+CVE-2023-3576.patch
