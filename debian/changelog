@@ -1,3 +1,27 @@
+tiff (4.3.0-6ubuntu0.8) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: heap based buffer overflow
+    - debian/patches/CVE-2023-6228.patch: add check for codec configuration
+      in tools/tiffcp.c.
+    - CVE-2023-6228
+  * SECURITY UPDATE: memory exhaustion
+    - debian/patches/CVE-2023-6277-1.patch: add multiple checks for requested
+      memory being greater than filesize in libtiff/tif_dirread.c.
+    - debian/patches/CVE-2023-6277-2.patch: add an extra check for above
+      condition, to only do it for a defined large request in
+      libtiff/tif_dirread.c.
+    - debian/patches/CVE-2023-6277-3.patch: remove one of the checks in
+      libtiff/tif_dirread.c.
+    - debian/patches/CVE-2023-6277-4.patch: add the extra check, to only do
+      it for a defined large request in more methods in libtiff/tif_dirread.c.
+    - CVE-2023-6277
+  * SECURITY UPDATE: segmentation fault
+    - debian/patches/CVE-2023-52356.patch: add row and column check based
+      on image sizes in libtiff/tif_getimage.c.
+    - CVE-2023-52356
+
+ -- Rodrigo Figueiredo Zaiden <rodrigo.zaiden@canonical.com>  Fri, 09 Feb 2024 18:02:38 -0300
+
 tiff (4.3.0-6ubuntu0.7) jammy-security; urgency=medium
 
   * SECURITY UPDATE: denial of service
