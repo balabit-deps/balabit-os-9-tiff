@@ -1,3 +1,11 @@
+tiff (4.3.0-6ubuntu0.9) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: heap buffer overflow in tiffcrop.c
+    - debian/patches/CVE-2023-3164.patch: heap buffer overflow in tiffcrop.c
+    - CVE-2023-3164
+
+ -- Bruce Cable <bruce.cable@canonical.com>  Wed, 29 May 2024 12:08:52 +1000
+
 tiff (4.3.0-6ubuntu0.8) jammy-security; urgency=medium
 
   * SECURITY UPDATE: heap based buffer overflow
