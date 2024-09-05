@@ -1,3 +1,13 @@
+tiff (4.3.0-6ubuntu0.10) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: null pointer dereference
+    - debian/patches/CVE-2024-7006.patch: adds check for the return value
+      of _TIFFCreateAnonField() to handle potential NULL pointers in
+      libtiff/tif_dirinfo.c and libtiff/tif_dirread.c.
+    - CVE-2024-7006
+
+ -- Ian Constantin <ian.constantin@canonical.com>  Thu, 05 Sep 2024 16:59:39 +0300
+
 tiff (4.3.0-6ubuntu0.9) jammy-security; urgency=medium
 
   * SECURITY UPDATE: heap buffer overflow in tiffcrop.c
