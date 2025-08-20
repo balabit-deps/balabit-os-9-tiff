@@ -1,3 +1,18 @@
+tiff (4.3.0-6ubuntu0.11) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: null-pointer dereference
+    - d/p/CVE-2025-8534.patch: tiff2ps: check return of TIFFGetFiled() to
+      fix
+    - CVE-2025-8534
+  * SECURITY UPDATE: use-after-free issue
+    - d/p/CVE-2025-8176.patch: fix heap use-after-free in tiffmedian
+    - CVE-2025-8176
+  * SECURITY UPDATE: stack-based buffer overflow
+    - d/p/CVE-2025-8851.patch: address tiffcrop buffer overflow issues
+    - CVE-2025-8851
+
+ -- Nishit Majithia <nishit.majithia@canonical.com>  Wed, 20 Aug 2025 15:55:06 +0530
+
 tiff (4.3.0-6ubuntu0.10) jammy-security; urgency=medium
 
   * SECURITY UPDATE: null pointer dereference
