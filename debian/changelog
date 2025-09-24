@@ -1,3 +1,20 @@
+tiff (4.3.0-6ubuntu0.12) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: Memory corruption.
+    - debian/patches/CVE-2025-8961.patch: Add _TIFFfree and extra read_buff
+      check in tools/tiffcrop.c.
+    - CVE-2025-8961
+  * SECURITY UPDATE: Memory leak.
+    - debian/patches/CVE-2025-9165.patch: Add TIFFClose in tools/tiffcmp.c.
+    - CVE-2025-9165
+  * SECURITY UPDATE: Out of bounds write when processing specially crafted
+    TIFF files.
+    - debian/patches/CVE-2025-9900.patch: Add img->height and img->width
+      checks in libtiff/tif_getimage.c.
+    - CVE-2025-9900
+
+ -- Hlib Korzhynskyy <hlib.korzhynskyy@canonical.com>  Wed, 24 Sep 2025 15:59:49 -0230
+
 tiff (4.3.0-6ubuntu0.11) jammy-security; urgency=medium
 
   * SECURITY UPDATE: null-pointer dereference
