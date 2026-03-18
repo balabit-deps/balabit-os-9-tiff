@@ -1,3 +1,16 @@
+tiff (4.3.0-6ubuntu0.13) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: null-pointer dereference
+    - debian/patches/CVE-2025-61143.patch: check for null pointer before call
+      to TIFFFileName in tools/tiffcrop.c.
+    - CVE-2025-61143
+  * SECURITY UPDATE: stack buffer overflow
+    - debian/patches/CVE-2025-61144.patch: update loop condition to also check
+      samples against MAX_SAMPLES in tools/tiffcrop.c.
+    - CVE-2025-61144
+
+ -- Ian Constantin <ian.constantin@canonical.com>  Wed, 18 Mar 2026 10:40:54 +0200
+
 tiff (4.3.0-6ubuntu0.12) jammy-security; urgency=medium
 
   * SECURITY UPDATE: Memory corruption.
